@@ -1,0 +1,1757 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: #081c3a;
+}
+
+.scrollyBar {
+  width: 80px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  border-right: 1px solid rgba(242, 242, 246, 0.2);
+  z-index: 25;
+}
+
+.scrollyBar .hamburgerContainer {
+  transition: 1s;
+  z-index: 10;
+  width: 80px;
+  height: 100px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scrollyBar .hamburgerContainer .hamburger {
+  height: 20px;
+  width: 20px;
+  transform-origin: center;
+  animation: rotate-appear-animation 1s ease-in-out forwards;
+}
+
+.scrollyBar .hamburgerContainer .hamburger:hover {
+  cursor: pointer;
+}
+
+@keyframes rotate-appear-animation {
+  0% {
+    opacity: 0;
+    transform: rotate(0deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(180deg);
+  }
+}
+
+.scrollyBar .sidebar.open {
+  animation: sidebaropen 1.2s ease-in-out 1 normal forwards;
+}
+
+@keyframes sidebaropen {
+  0% {
+    left: -445px;
+  }
+  100% {
+    left: 0px;
+  }
+}
+
+.scrollyBar .sidebar {
+  width: 440px;
+  overflow: hidden;
+  height: 100vh;
+  z-index: 7;
+  background-color: white;
+  position: fixed;
+  left: -445px;
+  transition-timing-function: ease-in-out;
+}
+
+.scrollyBar .sidebar .sidebarContainer {
+  width: 430px;
+  height: 100vh;
+  margin: 100px 0px 0px 50px;
+}
+
+.scrollyBar .sidebar .sidebarContainer .exploreV {
+  font-size: 25px;
+  font-weight: 700;
+  color: #081c3a;
+  margin-bottom: 30px;
+}
+
+.scrollyBar .sidebar .sidebarContainer .sidebarScrollContainer {
+  width: 380px;
+  height: calc(100vh - 180px);
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.scrollyBar .sidebar .sidebarContainer .sidebarScrollContainer .ScrollboxSecond {
+  margin-top: 50px;
+}
+
+.scrollyBar .sidebar .sidebarContainer .sidebarScrollContainer .sidebarScrollbox {
+  width: 360px;
+}
+
+.scrollyBar .sidebar .sidebarContainer .sidebarScrollContainer .sidebarScrollbox .scrollboxtitle {
+  width: 340px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.scrollyBar .sidebar .sidebarContainer .sidebarScrollContainer .sidebarScrollbox .scrollboxtitle :nth-child(1) {
+  letter-spacing: 2px;
+  font-size: 10px;
+}
+
+.scrollyBar .sidebar .sidebarContainer .sidebarScrollContainer .sidebarScrollbox .scrollboxtitle :nth-child(2) {
+  width: 110px;
+  height: 1px;
+  border-bottom: 1px solid #f2f2f6;
+}
+
+.scrollyBar .sidebar .sidebarContainer .sidebarScrollContainer .sidebarScrollbox .scrollboxcontent.infocontent {
+  margin: 10px 5px 10px 0;
+  border: 1px solid #f2f2f6;
+  width: 340px;
+  height: 50px;
+  transition: 0.5s;
+  border-radius: 5px;
+  background-color: #f7f8fc;
+}
+
+.scrollyBar .sidebar .sidebarContainer .sidebarScrollContainer .sidebarScrollbox .scrollboxcontent {
+  margin: 10px 5px 10px 0;
+  border: 1px solid #f2f2f6;
+  width: 340px;
+  height: 100px;
+  transition: 0.5s;
+  border-radius: 5px;
+}
+
+.scrollyBar .sidebar .sidebarContainer .sidebarScrollContainer .sidebarScrollbox .scrollboxcontent:hover {
+  transform: scale(1.05);
+  transition-timing-function: ease-in-out;
+}
+
+.scrollyBar .sidebar .sidebarContainer .sidebarScrollContainer .sidebarScrollbox .scrollboxcontent:hover .Africa {
+  background: url(./assets/EgyptSimbel.optimal.jpg) no-repeat;
+  background-size: cover;
+}
+
+.scrollyBar .sidebar .sidebarContainer .sidebarScrollContainer .sidebarScrollbox .scrollboxcontent:hover .Asia {
+  background: url(./assets/oahu.jpg) no-repeat;
+  background-size: cover;
+}
+
+.scrollyBar .sidebar .sidebarContainer .sidebarScrollContainer .sidebarScrollbox .scrollboxcontent:hover .Europe {
+  background: url(./assets/sailboat.jpg) no-repeat;
+  background-size: cover;
+}
+
+.scrollyBar .sidebar .sidebarContainer .sidebarScrollContainer .sidebarScrollbox .scrollboxcontent:hover .France {
+  background: url(./assets/Greecenight.jpg) no-repeat;
+  background-size: cover;
+}
+
+.scrollyBar .sidebar .sidebarContainer .sidebarScrollContainer .sidebarScrollbox .scrollboxcontent:hover .Greece {
+  background: url(./assets/Greecepicture.jpg) no-repeat;
+  background-size: cover;
+}
+
+.scrollyBar .sidebar .sidebarContainer .sidebarScrollContainer .sidebarScrollbox .scrollboxcontent:hover .Egypt {
+  background: url(./assets/Egypt.jpg) no-repeat;
+  background-size: cover;
+}
+
+.scrollyBar .sidebar .sidebarContainer .sidebarScrollContainer .sidebarScrollbox .scrollboxcontent:hover .boxcontent_locations .boxcontent_card .cardName {
+  color: white;
+  font-weight: 700;
+}
+
+.scrollyBar .sidebar .sidebarContainer .sidebarScrollContainer .sidebarScrollbox .scrollboxcontent:hover .boxcontent_locations .boxcontent_card .sixlocations {
+  color: white;
+}
+
+.scrollyBar .sidebar .sidebarContainer .sidebarScrollContainer .sidebarScrollbox .scrollboxcontent:hover .boxcontent_locations .boxcontent_gonext {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scrollyBar .sidebar .sidebarContainer .sidebarScrollContainer .sidebarScrollbox .scrollboxcontent:hover .boxcontent_locations .boxcontent_gonext :nth-child(1) {
+  color: white;
+}
+
+.scrollyBar .sidebar .sidebarContainer .sidebarScrollContainer .sidebarScrollbox .scrollboxcontent:hover .boxcontent_locations.contact {
+  background-color: #f7f8fc;
+  transition: 0.5s;
+  transition-timing-function: ease-in-out;
+}
+
+.scrollyBar .sidebar .sidebarContainer .sidebarScrollContainer .sidebarScrollbox .scrollboxcontent:hover .boxcontent_locations.contact:hover .boxcontent_card {
+  transform: translate(15px);
+}
+
+.scrollyBar .sidebar .sidebarContainer .sidebarScrollContainer .sidebarScrollbox .scrollboxcontent:hover .boxcontent_locations.contact:hover .info_gonext {
+  transform: translate(15px);
+}
+
+.scrollyBar .sidebar .sidebarContainer .sidebarScrollContainer .sidebarScrollbox .scrollboxcontent:hover .boxcontent_locations .info_gonext :nth-child(1) {
+  color: #152844;
+  background-color: #f7f8fc;
+  border: 1px solid #f2f2f6;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scrollyBar .sidebar .sidebarContainer .sidebarScrollContainer .sidebarScrollbox .scrollboxcontent .boxcontent_locations {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.scrollyBar .sidebar .sidebarContainer .sidebarScrollContainer .sidebarScrollbox .scrollboxcontent .boxcontent_locations:hover {
+  cursor: pointer;
+}
+
+.scrollyBar .sidebar .sidebarContainer .sidebarScrollContainer .sidebarScrollbox .scrollboxcontent .boxcontent_locations .boxcontent_card {
+  padding: 20px 20px;
+}
+
+.scrollyBar .sidebar .sidebarContainer .sidebarScrollContainer .sidebarScrollbox .scrollboxcontent .boxcontent_locations .boxcontent_card:hover {
+  cursor: pointer;
+}
+
+.scrollyBar .sidebar .sidebarContainer .sidebarScrollContainer .sidebarScrollbox .scrollboxcontent .boxcontent_locations .boxcontent_card .cardName {
+  font-size: 20px;
+  color: #081c3a;
+}
+
+.scrollyBar .sidebar .sidebarContainer .sidebarScrollContainer .sidebarScrollbox .scrollboxcontent .boxcontent_locations .boxcontent_card .sixlocations {
+  font-size: 12px;
+  color: #4a586f;
+  letter-spacing: 2px;
+  padding: 15px 0px;
+}
+
+.scrollyBar .sidebar .sidebarContainer .sidebarScrollContainer .sidebarScrollbox .scrollboxcontent .boxcontent_locations .boxcontent_gonext {
+  border-radius: 50%;
+  border: 1px solid white;
+  width: 30px;
+  height: 30px;
+  margin-right: 20px;
+  display: none;
+}
+
+.scrollyBar .sidebar .sidebarContainer .sidebarScrollContainer .sidebarScrollbox .followustitle {
+  width: 340px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 60px 0;
+}
+
+.scrollyBar .sidebar .sidebarContainer .sidebarScrollContainer .sidebarScrollbox .followustitle :nth-child(1) {
+  letter-spacing: 2px;
+  font-size: 14px;
+}
+
+.scrollyBar .sidebar .sidebarContainer .sidebarScrollContainer .sidebarScrollbox .followusIcon {
+  display: flex;
+  align-items: center;
+  width: 220px;
+}
+
+.scrollyBar .sidebar .sidebarContainer .sidebarScrollContainer .sidebarScrollbox .followusIcon .followusIcon_circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #f7f8fc;
+  margin-right: 15px;
+}
+
+.scrollyBar .sidebar .sidebarContainer .sidebarScrollContainer .sidebarScrollbox .followusIcon .followusIcon_circle:hover {
+  cursor: pointer;
+}
+
+.scrollyBar .box_FII {
+  width: 80px;
+  height: 120px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.scrollyBar .box_FII .companyicon {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scrollyBar .box_FII .companyicon:hover {
+  cursor: pointer;
+  background-color: #3572ff;
+}
+
+.hero {
+  width: auto;
+  height: 600px;
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+  object-fit: fill;
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero .hiddentopTitle {
+  width: calc(100% - 80px);
+  transition: 2s;
+  background-color: white;
+  z-index: 5;
+  height: 0;
+  overflow: hidden;
+}
+
+.hero .hiddentopTitle .hiddentest {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  min-width: 1300px;
+}
+
+.hero .hiddentopTitle .hidden_topTitleContnet {
+  background-color: white;
+  z-index: 4;
+  width: 100vw;
+  position: fixed;
+  top: 0px;
+  left: 80px;
+  height: 0;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.hero .hiddentopTitle .hidden_topTitleContnet .hiddenCovilla {
+  float: left;
+  line-height: 100px;
+  font-size: 25px;
+  margin: 25px 0px 0px 40px;
+  font-weight: 700;
+}
+
+.hero .hiddentopTitle .hidden_topTitleContnet .hiddenCovilla span {
+  font-weight: 750;
+}
+
+.hero .hiddentopTitle .hidden_topTitleContnet .hiddenTopSelections {
+  width: 400px;
+  float: left;
+  margin: 20px 200px 0 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero .hiddentopTitle .hidden_topTitleContnet .hiddenTopSelections .hiddennavButt {
+  letter-spacing: 2px;
+  font-weight: 600;
+  padding: 10px;
+}
+
+.hero .hiddentopTitle .hidden_topTitleContnet .hiddenTopSelections {
+  width: 400px;
+  float: left;
+  margin: 20px 200px 0 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+
+.hero .hiddentopTitle .hidden_topTitleContnet .hiddenTopSelections div {
+  letter-spacing: 2px;
+  z-index: 10;
+  font-weight: 650;
+}
+
+.hero .hiddentopTitle .hidden_topTitleContnet .hiddenTopSelections div:hover {
+  cursor: pointer;
+}
+
+.hero .hiddentopTitle .hidden_topTitleContnet .hidden_destinationsBox {
+  float: left;
+  border: 1px solid #081c3a;
+  border-radius: 5px;
+  margin: 28px 210px 0px 0px;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero .hiddentopTitle .hidden_topTitleContnet .hidden_destinationsBox h3 {
+  font-size: 16px;
+  font-weight: 650;
+  padding: 10px 15px;
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+.hero .hiddentopTitle .hidden_topTitleContnet .hidden_destinationsBox svg {
+  padding: 5px 10px 0 10px;
+}
+
+.hero .hiddentopTitle .hidden_topTitleContnet .hidden_destinationsBox:hover {
+  cursor: pointer;
+}
+
+.hero .topTitle {
+  height: 100px;
+  width: 100vw;
+  min-width: 1300px;
+  margin-left: 100px;
+  position: fixed;
+  top: 0px;
+  left: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 5;
+}
+
+.hero .topTitle .TopSelections {
+  width: 400px;
+  float: left;
+  margin: 20px 200px 0 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero .topTitle .TopSelections .navButt {
+  letter-spacing: 2px;
+  font-weight: 600;
+  padding: 5px;
+  border-radius: 5px;
+  display: none;
+}
+
+.hero .topTitle .TopSelections .navButt:hover {
+  cursor: pointer;
+}
+
+.hero .topTitle .covilla {
+  margin: 30px 0 0 0;
+  color: white;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.hero .topTitle .destinationsBox {
+  border: 1px solid #f2f2f6;
+  border-radius: 5px;
+  color: #152844;
+  margin: 30px 250px 0px 0px;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero .topTitle .destinationsBox h3 {
+  font-size: 16px;
+  font-weight: 650;
+  padding: 10px 15px;
+  margin: 0px;
+  letter-spacing: 2px;
+  color: white;
+}
+
+.hero .topTitle .destinationsBox svg {
+  padding: 5px 10px 0 10px;
+}
+
+.hero .topTitle .destinationsBox:hover {
+  cursor: pointer;
+}
+
+.hero .topTitle .destination_options.open {
+  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+}
+
+.hero .topTitle .destination_options {
+  width: 500px;
+  height: 300px;
+  z-index: 5;
+  border-radius: 10px;
+  background-color: white;
+  position: fixed;
+  top: 103px;
+  right: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.hero .topTitle .destination_options .DE_optionContent {
+  width: 460px;
+  height: 260px;
+}
+
+.hero .topTitle .destination_options .DE_optionContent .scrollboxtitle {
+  width: 460px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.hero .topTitle .destination_options .DE_optionContent .scrollboxtitle :nth-child(1) {
+  letter-spacing: 2px;
+  font-size: 14px;
+}
+
+.hero .topTitle .destination_options .DE_optionContent .scrollboxtitle :nth-child(2) {
+  width: 260px;
+  height: 1px;
+  border-bottom: 1px solid #f2f2f6;
+}
+
+.hero .topTitle .destination_options .DE_optionContent .locationsFLEX {
+  display: flex;
+  justify-content: space-between;
+  width: 460px;
+  height: 120px;
+}
+
+.hero .topTitle .destination_options .DE_optionContent .locationsFLEX .scrollboxcontent {
+  margin: 10px 5px 10px 0;
+  border: 1px solid #f2f2f6;
+  width: 340px;
+  height: 100px;
+  transition: 0.5s;
+  border-radius: 5px;
+}
+
+.hero .topTitle .destination_options .DE_optionContent .locationsFLEX .scrollboxcontent:hover {
+  transform: scale(1.05);
+  transition-timing-function: ease-in-out;
+  cursor: pointer;
+}
+
+.hero .topTitle .destination_options .DE_optionContent .locationsFLEX .scrollboxcontent:hover .France {
+  background: url(./assets/Greecenight.jpg) no-repeat;
+  background-size: cover;
+}
+
+.hero .topTitle .destination_options .DE_optionContent .locationsFLEX .scrollboxcontent:hover .Asia {
+  background: url(./assets/oahu.jpg) no-repeat;
+  background-size: cover;
+}
+
+.hero .topTitle .destination_options .DE_optionContent .locationsFLEX .scrollboxcontent:hover .Greece {
+  background: url(./assets/Greecepicture.jpg) no-repeat;
+  background-size: cover;
+}
+
+.hero .topTitle .destination_options .DE_optionContent .locationsFLEX .scrollboxcontent:hover .Egypt {
+  background: url(./assets/Egypt.jpg) no-repeat;
+  background-size: cover;
+}
+
+.hero .topTitle .destination_options .DE_optionContent .locationsFLEX .scrollboxcontent:hover .boxcontent_locations .boxcontent_card .cardName {
+  color: white;
+  font-weight: 700;
+}
+
+.hero .topTitle .destination_options .DE_optionContent .locationsFLEX .scrollboxcontent:hover .boxcontent_locations .boxcontent_card .sixlocations {
+  color: white;
+}
+
+.hero .topTitle .destination_options .DE_optionContent .locationsFLEX .scrollboxcontent:hover .boxcontent_locations .boxcontent_gonext {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero .topTitle .destination_options .DE_optionContent .locationsFLEX .scrollboxcontent:hover .boxcontent_locations .boxcontent_gonext :nth-child(1) {
+  color: white;
+}
+
+.hero .topTitle .destination_options .DE_optionContent .locationsFLEX .scrollboxcontent:hover .boxcontent_locations.contact {
+  background-color: #f7f8fc;
+  transition: 0.5s;
+  transition-timing-function: ease-in-out;
+}
+
+.hero .topTitle .destination_options .DE_optionContent .locationsFLEX .scrollboxcontent:hover .boxcontent_locations.contact:hover .boxcontent_card {
+  transform: translate(15px);
+}
+
+.hero .topTitle .destination_options .DE_optionContent .locationsFLEX .scrollboxcontent:hover .boxcontent_locations.contact:hover .info_gonext {
+  transform: translate(15px);
+}
+
+.hero .topTitle .destination_options .DE_optionContent .locationsFLEX .scrollboxcontent:hover .boxcontent_locations .info_gonext :nth-child(1) {
+  color: #152844;
+  background-color: #f7f8fc;
+  border: 1px solid #f2f2f6;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero .topTitle .destination_options .DE_optionContent .locationsFLEX .scrollboxcontent .boxcontent_locations {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero .topTitle .destination_options .DE_optionContent .locationsFLEX .scrollboxcontent .boxcontent_locations .boxcontent_card {
+  padding: 20px 20px;
+}
+
+.hero .topTitle .destination_options .DE_optionContent .locationsFLEX .scrollboxcontent .boxcontent_locations .boxcontent_card .cardName {
+  font-size: 20px;
+  color: #081c3a;
+}
+
+.hero .topTitle .destination_options .DE_optionContent .locationsFLEX .scrollboxcontent .boxcontent_locations .boxcontent_card .sixlocations {
+  font-size: 12px;
+  color: #4a586f;
+  letter-spacing: 2px;
+  padding: 15px 0px;
+}
+
+.hero .topTitle .destination_options .DE_optionContent .locationsFLEX .scrollboxcontent .boxcontent_locations .boxcontent_gonext {
+  border-radius: 50%;
+  border: 1px solid white;
+  width: 30px;
+  height: 30px;
+  margin-right: 20px;
+  display: none;
+}
+
+.hero .content {
+  width: 1300px;
+  height: 300px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.hero .content .contentContainer {
+  position: absolute;
+  top: 350px;
+  left: 50px;
+  width: 1200px;
+  height: 280px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero .content .contentContainer .titleintro .country_title {
+  width: 300px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero .content .contentContainer .titleintro .country_title .name1 {
+  width: 100px;
+  font-size: 13px;
+  line-height: 1.4em;
+  font-weight: 400;
+  letter-spacing: 3px;
+  text-align: center;
+}
+
+.hero .content .contentContainer .titleintro .country_title .name2 {
+  width: 100px;
+  height: 1px;
+  background-color: white;
+}
+
+.hero .content .contentContainer .titleintro .country_title .name3 {
+  width: 100px;
+  font-size: 13px;
+  line-height: 1.4em;
+  font-weight: 400;
+  letter-spacing: 3px;
+  text-align: center;
+}
+
+.hero .content .contentContainer .titleintro .titleintro_country {
+  font-size: 68px;
+  line-height: 1.1em;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+
+.hero .content .contentContainer .titleArrows {
+  width: 200px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero .content .contentContainer .titleArrows .titleA_left {
+  width: 70px;
+  height: 70px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin-right: 25px;
+}
+
+.hero .content .contentContainer .titleArrows .titleA_left:hover {
+  cursor: pointer;
+}
+
+.hero .content .contentContainer .titleArrows .titleA_right {
+  width: 70px;
+  height: 70px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.hero .content .contentContainer .titleArrows .titleA_right:hover {
+  cursor: pointer;
+}
+
+.guideAndWaterfall {
+  margin-left: 80px;
+  width: 100vw;
+  height: 1000px;
+}
+
+.guideAndWaterfall .guideAndWaterfall_center {
+  width: 1500px;
+  height: 1000px;
+  margin: 0 auto;
+}
+
+.guideAndWaterfall .guideAndWaterfall_center .agentContact_Container {
+  margin-top: 80px;
+  margin-left: 100px;
+}
+
+.guideAndWaterfall .guideAndWaterfall_center .agentContact_Container .agentBoxContainer {
+  display: flex;
+  width: 1300px;
+  height: 200px;
+  border: 1px solid rgba(192, 192, 211, 0.2);
+  border-radius: 12px;
+}
+
+.guideAndWaterfall .guideAndWaterfall_center .agentContact_Container .agentBoxContainer .agentContactBox {
+  width: 325px;
+  height: 150px;
+  padding: 36px 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: 1s;
+  color: #516381;
+  border-radius: 12px;
+  transition: 1s;
+}
+
+.guideAndWaterfall .guideAndWaterfall_center .agentContact_Container .agentBoxContainer .agentContactBox:hover {
+  cursor: pointer;
+  transform: scale(1.03);
+  z-index: 2;
+  box-shadow: 0 9px 42px -6px rgba(53, 64, 117, 0.5);
+  background-color: white;
+}
+
+.guideAndWaterfall .guideAndWaterfall_center .agentContact_Container .agentBoxContainer .agentContactBox .circleIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border: 1px solid rgba(192, 192, 211, 0.2);
+  border-radius: 100px;
+  background-color: #fff;
+}
+
+.guideAndWaterfall .guideAndWaterfall_center .agentContact_Container .agentBoxContainer .agentContactBox .agentBoxsubTitle {
+  margin: 25px 0;
+}
+
+.guideAndWaterfall .guideAndWaterfall_center .agentContact_Container .agentBoxContainer .agentContactBox .agentinfo {
+  height: 34px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.guideAndWaterfall .guideAndWaterfall_center .agentContact_Container .agentBoxContainer .agentContactBox .agentinfo ul {
+  width: 190px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.guideAndWaterfall .guideAndWaterfall_center .agentContact_Container .agentBoxContainer .agentContactBox .agentinfo ul:hover {
+  cursor: pointer;
+}
+
+.guideAndWaterfall .guideAndWaterfall_center .agentContact_Container .agentBoxContainer .agentContactBox .agentinfo ul div {
+  width: 32px;
+  height: 32px;
+  border: 1px solid rgba(192, 192, 211, 0.2);
+  border-radius: 100px;
+  background-color: #f7f8fc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.guideAndWaterfall .guideAndWaterfall_center .agentContact_Container .agentBoxContainer .agentContactBox .agentinfo ul div svg {
+  width: 20px;
+  height: 20px;
+}
+
+.guideAndWaterfall .guideAndWaterfall_center .agentContact_Container .agentBoxContainer .verticalLine {
+  width: 1px;
+  height: 200px;
+  background-color: rgba(192, 192, 211, 0.2);
+}
+
+.guideAndWaterfall .guideAndWaterfall_center .guide_waterfall {
+  min-width: 900px;
+  width: 1300px;
+  height: 500px;
+  column-count: 3;
+  column-gap: 1px;
+  counter-reset: count;
+  list-style: none;
+  margin-left: 65px;
+  margin-top: 100px;
+}
+
+.guideAndWaterfall .guideAndWaterfall_center .guide_waterfall li {
+  position: relative;
+  margin-bottom: 5px;
+  width: 340px;
+}
+
+.guideAndWaterfall .guideAndWaterfall_center .guide_waterfall li img {
+  width: 340px;
+  border-radius: 5px;
+}
+
+.guideAndWaterfall .guideAndWaterfall_center .guide_waterfall li .share_1 {
+  width: 600px;
+  height: 495px;
+  object-fit: fill;
+}
+
+.guideAndWaterfall .guideAndWaterfall_center .guide_waterfall li .share_2 {
+  margin-left: 172px;
+}
+
+.guideAndWaterfall .guideAndWaterfall_center .guide_waterfall li .share_3 {
+  margin-left: 172px;
+}
+
+.guideAndWaterfall .guideAndWaterfall_center .guide_waterfall li .share_4 {
+  margin-left: 100px;
+}
+
+.guideAndWaterfall .guideAndWaterfall_center .guide_waterfall li .share_5 {
+  margin-left: 100px;
+}
+
+.guideAndWaterfall .guideAndWaterfall_center .guide_waterfall li .share_2,
+.guideAndWaterfall .guideAndWaterfall_center .guide_waterfall li .share_3,
+.guideAndWaterfall .guideAndWaterfall_center .guide_waterfall li .share_4,
+.guideAndWaterfall .guideAndWaterfall_center .guide_waterfall li .share_5 {
+  width: 355px;
+  height: 243px;
+}
+
+.paragraph {
+  margin-left: 80px;
+  width: 100vw;
+  height: 2200px;
+  margin-bottom: 100px;
+}
+
+.paragraph .paragraph_center {
+  width: 1300px;
+  height: 2130px;
+  margin: 0px auto;
+}
+
+.paragraph .paragraph_center .paragraphContainer {
+  width: 1300px;
+  height: 2130px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.paragraph .paragraph_center .paragraphContainer .paragraph_text {
+  width: 635px;
+}
+
+.paragraph .paragraph_center .paragraphContainer .paragraph_text .textComponent {
+  width: 635px;
+  color: #516381;
+}
+
+.paragraph .paragraph_center .paragraphContainer .paragraph_text .textComponent .text_title {
+  font-family: Poppins, sans-serif;
+  font-size: 34px;
+  line-height: 1.3em;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  color: #081c3a;
+}
+
+.paragraph .paragraph_center .paragraphContainer .paragraph_text .textComponent .text_content {
+  margin-top: 25px;
+  font-size: 17px;
+  line-height: 1.5em;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+}
+
+.paragraph .paragraph_center .paragraphContainer .paragraph_text .textComponent .contentBox {
+  width: 635px;
+  margin: 30px 0;
+}
+
+.paragraph .paragraph_center .paragraphContainer .paragraph_text .textComponent .contentBox .contenttitle {
+  font-family: Poppins, sans-serif;
+  font-size: 22px;
+  line-height: 1.25em;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  margin-top: 24px;
+  margin-bottom: 12px;
+  color: #081c3a;
+}
+
+.paragraph .paragraph_center .paragraphContainer .paragraph_text .textComponent .contentBox .bluebox {
+  margin-top: 24px;
+  margin-bottom: 24px;
+  padding: 18px 24px;
+  border-left: 3px solid rgba(192, 192, 211, 0.2);
+  border-radius: 0px 5px 5px 0px;
+  background-color: #f7f8fc;
+  color: #516381;
+  font-size: 17px;
+  line-height: 1.6em;
+}
+
+.paragraph .paragraph_center .paragraphContainer .paragraph_text .textComponent .contentBox .rest_content {
+  margin-bottom: 12px;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  font-size: 17px;
+  line-height: 1.5em;
+}
+
+.paragraph .paragraph_center .paragraphContainer .paragraph_text .textComponent .contactbox {
+  margin-top: 80px;
+  width: 600px;
+  height: 325px;
+  border: 1px solid rgba(192, 192, 211, 0.2);
+  border-radius: 12px;
+  background-color: #f7f8fc;
+  padding: 35px;
+}
+
+.paragraph .paragraph_center .paragraphContainer .paragraph_text .textComponent .contactbox .cu {
+  font-family: Poppins, sans-serif;
+  font-size: 22px;
+  line-height: 1.25em;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  color: #081c3a;
+}
+
+.paragraph .paragraph_center .paragraphContainer .paragraph_text .textComponent .contactbox .text {
+  margin-top: 20px;
+  font-size: 14px;
+  line-height: 1.4em;
+}
+
+.paragraph .paragraph_center .paragraphContainer .paragraph_text .textComponent .contactbox .contact_features {
+  border-radius: 5px;
+  margin: 35px 0;
+  width: 580px;
+  height: 50px;
+  background-color: #fff;
+  border: 1px solid rgba(192, 192, 211, 0.2);
+  transition: 1s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.paragraph .paragraph_center .paragraphContainer .paragraph_text .textComponent .contactbox .contact_features .text_features {
+  color: #081c3a;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.paragraph .paragraph_center .paragraphContainer .paragraph_text .textComponent .contactbox .contact_features .features_circle {
+  width: 35px;
+  height: 35px;
+  margin-right: 25px;
+  border-radius: 50%;
+  background-color: white;
+  border: 1px solid rgba(192, 192, 211, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.paragraph .paragraph_center .paragraphContainer .paragraph_text .textComponent .contactbox .contact_features:hover {
+  cursor: pointer;
+}
+
+.paragraph .paragraph_center .paragraphContainer .paragraph_text .textComponent .contactbox .contact_features:hover .text_features {
+  transform: translateX(10px);
+}
+
+.paragraph .paragraph_center .paragraphContainer .paragraph_text .textComponent .contactbox .contact_features:hover .features_circle {
+  opacity: 1;
+  transform: translateX(10px);
+}
+
+.paragraph .paragraph_center .paragraphContainer .locationagent {
+  position: sticky;
+  top: 100px;
+  left: 0px;
+  width: 550px;
+  height: 610px;
+  padding: 24px;
+  border: 1px solid rgba(192, 192, 211, 0.2);
+  color: #081c3a;
+  border-radius: 8px;
+  margin-left: 40px;
+}
+
+.paragraph .paragraph_center .paragraphContainer .locationagent .iconarea {
+  width: 600px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.paragraph .paragraph_center .paragraphContainer .locationagent .iconarea .selfile {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: url(./assets/portrait5.jpg) no-repeat;
+  background-size: 120px 120px;
+}
+
+.paragraph .paragraph_center .paragraphContainer .locationagent .iconarea .person_info {
+  width: 440px;
+}
+
+.paragraph .paragraph_center .paragraphContainer .locationagent .iconarea .person_info .la {
+  font-size: 11px;
+  line-height: 1.4em;
+  font-weight: 400;
+  letter-spacing: 3px;
+  margin: 10px 0;
+}
+
+.paragraph .paragraph_center .paragraphContainer .locationagent .iconarea .person_info .name {
+  font-family: Poppins, sans-serif;
+  font-size: 22px;
+  line-height: 1.25em;
+  font-weight: 500;
+  margin: 10px 0;
+}
+
+.paragraph .paragraph_center .paragraphContainer .locationagent .iconarea .person_info .socialicons {
+  width: 400px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.paragraph .paragraph_center .paragraphContainer .locationagent .iconarea .person_info .iconcircle {
+  width: 35px;
+  height: 35px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background-color: #f7f8fc;
+  border: 1px solid rgba(192, 192, 211, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.paragraph .paragraph_center .paragraphContainer .locationagent .agent_line {
+  margin: 25px 0;
+  width: 560px;
+  height: 1px;
+  background-color: #f2f2f6;
+}
+
+.paragraph .paragraph_center .paragraphContainer .locationagent .inputinfo {
+  width: 600px;
+  height: 355px;
+}
+
+.paragraph .paragraph_center .paragraphContainer .locationagent .inputinfo .input {
+  margin-top: 25px;
+}
+
+.paragraph .paragraph_center .paragraphContainer .locationagent .inputinfo .input input {
+  padding: 5px;
+  width: 265px;
+  height: 50px;
+  border: 1px solid #f2f2f6;
+  border-radius: 5px;
+  margin-right: 5px;
+}
+
+.paragraph .paragraph_center .paragraphContainer .locationagent .inputinfo .input .input_name {
+  font-family: Inter, sans-serif;
+  color: #081c3a;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+.paragraph .paragraph_center .paragraphContainer .locationagent .inputinfo .input .inputfiled {
+  width: 600px;
+  height: 60px;
+}
+
+.paragraph .paragraph_center .paragraphContainer .locationagent .inputinfo .input .inputfiled .input_longbox {
+  padding: 5px;
+  width: 550px;
+  height: 50px;
+  border: 1px solid #f2f2f6;
+  border-radius: 5px;
+  margin-right: 5px;
+}
+
+.paragraph .paragraph_center .paragraphContainer .locationagent .inquireContainer {
+  display: none;
+  width: 550px;
+  height: 350px;
+  background-color: #f7f8fc;
+  margin-bottom: 25px;
+  border-radius: 10px;
+}
+
+.paragraph .paragraph_center .paragraphContainer .locationagent .inquireContainer .inquirecenter {
+  width: 580px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.paragraph .paragraph_center .paragraphContainer .locationagent .inquireContainer .inquirecenter .inquireTitle {
+  font-family: Poppins, sans-serif;
+  font-size: 22px;
+  line-height: 1.25em;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  color: #081c3a;
+  margin-bottom: 10px;
+}
+
+.paragraph .paragraph_center .paragraphContainer .locationagent .inquireContainer .inquirecenter .inquiresub {
+  font-size: 15px;
+  line-height: 1.25em;
+  font-weight: 500;
+  font-family: Inter, sans-serif;
+  color: #081c3a;
+}
+
+.paragraph .paragraph_center .paragraphContainer .locationagent .inquire {
+  width: 560px;
+  height: 60px;
+  background-color: #3572ff;
+  border-radius: 5px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 1s;
+  letter-spacing: 3px;
+}
+
+.paragraph .paragraph_center .paragraphContainer .locationagent .inquire:hover {
+  cursor: pointer;
+  background-color: #081c3a;
+  transform: scale(1.03);
+}
+
+.mapdiv {
+  margin-left: 80px;
+  width: 100vw;
+  height: 1000px;
+}
+
+.mapdiv .control {
+  width: 1300px;
+  height: 1000px;
+  margin: 0 auto;
+}
+
+.mapdiv .control .map {
+  margin: 100px auto;
+  width: 1300px;
+  height: 800px;
+  border-radius: 10px;
+}
+
+.background {
+  width: auto;
+  height: 1000px;
+  background: url(./assets/sunset.jpg) no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.background .backgroundContainer {
+  position: relative;
+  margin-top: 350px;
+}
+
+.background .backgroundContainer .background_number {
+  position: absolute;
+  left: 81px;
+  top: 0px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 370px;
+}
+
+.background .backgroundContainer .background_number div {
+  box-sizing: border-box;
+  padding: 0 18px;
+}
+
+.background .backgroundContainer .background_number .numberDefault {
+  border-left: 4px solid white;
+  border-radius: 2px 2px;
+}
+
+.background .backgroundContainer .background_allinfo {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.background .backgroundContainer .background_allinfo .background_text {
+  text-align: center;
+  width: 770px;
+  margin-bottom: 20px;
+  color: white;
+  word-spacing: 2px;
+  font-size: 25px;
+  animation: zoomin 2s ease-in-out 1 normal forwards;
+}
+
+@keyframes zoomin {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.background .backgroundContainer .background_allinfo .background_title {
+  text-align: center;
+  width: 500px;
+  margin: 50px 0;
+  color: white;
+  word-spacing: 2px;
+  font-size: 35px;
+  font-weight: bold;
+  transition: 2s;
+  transform-style: preserve-3d;
+  transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1);
+}
+
+.background .backgroundContainer .background_allinfo .background_leftrightArrow {
+  display: flex;
+  top: 500px;
+  left: 700px;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+.background .backgroundContainer .background_allinfo .background_leftrightArrow:hover {
+  cursor: pointer;
+}
+
+.background .backgroundContainer .background_allinfo .background_leftrightArrow .backg_arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+  width: 70px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.background .backgroundContainer .background_allinfo .background_leftrightArrow .background_rightArrow {
+  margin-right: 30px;
+}
+
+.background {
+  width: auto;
+  height: 1000px;
+  background: url(./assets/sunset.jpg) no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.background .backgroundContainer {
+  position: relative;
+  margin-top: 350px;
+}
+
+.background .backgroundContainer .background_number {
+  position: absolute;
+  left: 81px;
+  top: 0px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 370px;
+}
+
+.background .backgroundContainer .background_number div {
+  box-sizing: border-box;
+  padding: 0 18px;
+}
+
+.background .backgroundContainer .background_number .numberDefault {
+  border-left: 4px solid white;
+  border-radius: 2px 2px;
+}
+
+.background .backgroundContainer .background_allinfo {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.background .backgroundContainer .background_allinfo .background_text {
+  text-align: center;
+  width: 770px;
+  margin-bottom: 20px;
+  color: white;
+  word-spacing: 2px;
+  font-size: 25px;
+  animation: zoomin 2s ease-in-out 1 normal forwards;
+}
+
+@keyframes zoomin {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.background .backgroundContainer .background_allinfo .background_title {
+  text-align: center;
+  width: 500px;
+  margin: 50px 0;
+  color: white;
+  word-spacing: 2px;
+  font-size: 35px;
+  font-weight: bold;
+  transition: 2s;
+  transform-style: preserve-3d;
+  transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1);
+}
+
+.background .backgroundContainer .background_allinfo .background_leftrightArrow {
+  display: flex;
+  top: 500px;
+  left: 700px;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+.background .backgroundContainer .background_allinfo .background_leftrightArrow:hover {
+  cursor: pointer;
+}
+
+.background .backgroundContainer .background_allinfo .background_leftrightArrow .backg_arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+  width: 70px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.background .backgroundContainer .background_allinfo .background_leftrightArrow .background_rightArrow {
+  margin-right: 30px;
+}
+
+.covillaLocationsDisplay {
+  margin-top: -100px;
+  margin-left: 100px;
+}
+
+.covillaLocationsDisplay .LOdisplayContainer {
+  margin: 0 auto;
+  width: 1100px;
+  height: 870px;
+}
+
+.covillaLocationsDisplay .LOdisplayContainer .displayHeader {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.covillaLocationsDisplay .LOdisplayContainer .displayHeader .displayHeader_title {
+  width: 330px;
+  letter-spacing: 2px;
+  color: white;
+  margin-right: 20px;
+  font-weight: 550;
+}
+
+.covillaLocationsDisplay .LOdisplayContainer .displayHeader .displayHeader_line {
+  width: 725px;
+  height: 2px;
+  border-bottom: 1px solid #e6e6f3;
+}
+
+.covillaLocationsDisplay .LOdisplayContainer .locationDisplay {
+  width: 1080px;
+  height: 1000px;
+  background-color: white;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.covillaLocationsDisplay .LOdisplayContainer .locationDisplay .LOlocations {
+  width: 1000px;
+  display: flex;
+  margin: 40px 20px 0 20px;
+}
+
+.covillaLocationsDisplay .LOdisplayContainer .locationDisplay .LOlocations .LOlocations_content.defaultborder {
+  border-bottom: 2px solid #081c3a;
+}
+
+.covillaLocationsDisplay .LOdisplayContainer .locationDisplay .LOlocations .LOlocations_content {
+  transition: border 2s linear;
+  transform-origin: left right;
+  width: 250px;
+  height: 65px;
+  border-bottom: 2px solid #e6e6f3;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+}
+
+.covillaLocationsDisplay .LOdisplayContainer .locationDisplay .LOlocations .LOlocations_content:hover {
+  cursor: pointer;
+}
+
+.covillaLocationsDisplay .LOdisplayContainer .locationDisplay .LOlocations .LOlocations_content .locationsName {
+  color: #4c5a70;
+  letter-spacing: 2px;
+}
+
+.covillaLocationsDisplay .LOdisplayContainer .locationDisplay .LOlocations .LOlocations_content .LOlines_Circle.defaultCircle {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 1px solid #081c3a;
+  z-index: 2;
+  background-color: white;
+  display: block;
+  position: absolute;
+  top: 59px;
+  left: 116px;
+  transition: 1s;
+  transform: scale(3.2);
+  transform-origin: center;
+}
+
+.covillaLocationsDisplay .LOdisplayContainer .locationDisplay .LOlocations .LOlocations_content .dot.defaultDot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #081c3a;
+  z-index: 3;
+  position: absolute;
+  top: 59px;
+  left: 117px;
+}
+
+.covillaLocationsDisplay .LOdisplayContainer .locationDisplay .LOlocations .LOlocations_content .LOlines_Circle {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 1px solid #e6e6f3;
+  z-index: 2;
+  background-color: white;
+  position: absolute;
+  top: 59px;
+  left: 116px;
+  transition: 1s;
+  transform-origin: center;
+  transform: scale(0.6);
+}
+
+.covillaLocationsDisplay .LOdisplayContainer .locationDisplay .LOlocations .LOlocations_content .dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #e6e6f3;
+  z-index: 3;
+  position: absolute;
+  top: 58px;
+  left: 116px;
+  transition: 1.5s;
+}
+
+.covillaLocationsDisplay .LOdisplayContainer .locationDisplay .locationsExplanationBoxes {
+  width: 1080px;
+  height: 700px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  overflow: hidden;
+}
+
+.covillaLocationsDisplay .LOdisplayContainer .locationDisplay .locationsExplanationBoxes .locationExplanation {
+  width: 320px;
+  height: 450px;
+  border: 1px solid #f2f2f6;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px 10px;
+  transition: 1s;
+  transition-timing-function: ease-in-out;
+}
+
+.covillaLocationsDisplay .LOdisplayContainer .locationDisplay .locationsExplanationBoxes .locationExplanation:hover {
+  box-shadow: 0 9px 48px -6px rgba(53, 64, 117, 0.12);
+  transform: scale(1.03);
+}
+
+.covillaLocationsDisplay .LOdisplayContainer .locationDisplay .locationsExplanationBoxes .locationExplanation:hover .LE_img .popularLOImg {
+  transform: scale(1.06);
+  transition-timing-function: ease-in-out;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.covillaLocationsDisplay .LOdisplayContainer .locationDisplay .locationsExplanationBoxes .locationExplanation .LE_img {
+  width: 300px;
+  height: 200px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  padding: 20px 0px 20px 10px;
+  overflow: hidden;
+}
+
+.covillaLocationsDisplay .LOdisplayContainer .locationDisplay .locationsExplanationBoxes .locationExplanation .LE_img .popularLOImg {
+  transition: 1s;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.covillaLocationsDisplay .LOdisplayContainer .locationDisplay .locationsExplanationBoxes .locationExplanation .LE_title {
+  padding-left: 5px;
+  font-size: 25px;
+}
+
+.covillaLocationsDisplay .LOdisplayContainer .locationDisplay .locationsExplanationBoxes .locationExplanation .LE_content {
+  height: 50px;
+  width: 300px;
+  padding: 10px 0px 20px 5px;
+  border-bottom: 1px solid #f2f2f6;
+  margin-bottom: 15px;
+}
+
+.covillaLocationsDisplay .LOdisplayContainer .locationDisplay .locationsExplanationBoxes .locationExplanation .LE_rateinfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 300px;
+  color: #415068;
+}
+
+.covillaLocationsDisplay .LOdisplayContainer .locationDisplay .locationsExplanationBoxes .locationExplanation .LE_rateinfo .LE_rate:div:first-child {
+  letter-spacing: 2px;
+}
+
+.covillaLocationsDisplay .LOdisplayContainer .locationDisplay .locationsExplanationBoxes .locationExplanation .LE_detail {
+  border: 1px solid #f2f2f6;
+  padding: 15px 25px;
+  letter-spacing: 2px;
+  border-radius: 5px;
+  font-size: 13px;
+}
+
+.covillaLocationsDisplay .LOdisplayContainer .locationDisplay .locationsExplanationBoxes .locationExplanation .LE_detail:hover {
+  cursor: pointer;
+  background-color: #081c3a;
+  color: white;
+}
+
+.covillaLocationsDisplay .LOdisplayContainer .locationDisplay .locationsExplanationBoxes.greeceBox {
+  display: none;
+}
+
+.covillaLocationsDisplay .LOdisplayContainer .locationDisplay .locationsExplanationBoxes.indonesiaBox {
+  display: none;
+}
+
+.covillaLocationsDisplay .LOdisplayContainer .locationDisplay .locationsExplanationBoxes.franceBox {
+  display: none;
+}
+
+footer {
+  margin-left: 80px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+footer .footer_Container {
+  width: 1364px;
+  height: 100px;
+  padding: 48px 0px 12px 36px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer .footer_Container .footerdestinationContainer {
+  width: 540px;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer .footer_Container .footerdestinationContainer .footerDestination {
+  padding: 9px 14px;
+  border-radius: 5px;
+  background-color: #f7f8fc;
+  letter-spacing: 2px;
+  color: #6c778b;
+  font-size: 15px;
+  margin-right: 15px;
+}
+
+footer .footer_Container .footerdestinationContainer .footercountry {
+  color: #657590;
+  letter-spacing: 2px;
+  font-size: 14px;
+  padding: 15px;
+  border-radius: 5px;
+  transition: 0.5s;
+  transition-timing-function: linear;
+}
+
+footer .footer_Container .footerdestinationContainer .footercountry:hover {
+  cursor: pointer;
+  background-color: #f7f8fc;
+}
+
+footer .footer_Container .footercovillaContainer {
+  height: 100px;
+}
+
+footer .footer_Container .footercovillaContainer .footercovilla {
+  color: #081c3a;
+  font-size: 25px;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  margin-top: 30px;
+}
+
+footer .footer_Container .footercovillaContainer .footercovilla span {
+  font-weight: 700;
+}
+
+footer .footer_Container .footercovillaContainer .copyrightcovilla {
+  color: #657590;
+  margin-top: 30px;
+}
